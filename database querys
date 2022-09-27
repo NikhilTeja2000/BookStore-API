@@ -1,0 +1,24 @@
+/*queries used in data base*/
+create database Booksdb
+
+use Booksdb
+
+create table Category(CategoryId int primary key identity,CategoryName char(50),[Description] char(100),[Image] char(50),
+[Status] char(50),Position char(50),CreatedAt char(50)); 
+drop table Category
+
+
+
+create table Books(BookId int identity primary key, CategoryId int foreign key REFERENCES Category(CategoryId),Title char(50)
+   ,ISBN char(30),[Year] char(10),Price int,[Description] char(100),Position char(50),Status char(50),Image char(50));
+
+select * from Books
+
+select * from Category
+drop table Books
+
+insert into category(CategoryName,[Description],[Image],[Status],Position,CreatedAt) values('war','power','www.pwoer.com','True','r2c9','1999-01-12')
+
+delete from Books where BookId =2
+
+update Books set CategoryId=3,Title='books.Title',ISBN= 'books.ISBN',Year='books.Year', Price=52, Description = 'books.Description', Image = 'books.Image', Status = 'books.Statu', Position = 'books.Positi' where BookId = 8;
