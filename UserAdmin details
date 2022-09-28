@@ -1,0 +1,22 @@
+
+create table Admindet(adusername char(50),adpassword char(50))
+
+insert into Admindet values
+
+('nikhil','nikhil1'),
+('teja','teja1'),
+('aikhil','aikhil1'),
+('seja','seja1')
+
+
+create table Userdet(cusername char(50),cpassword char(50))
+
+insert into Userdet values
+
+('nikhilram','nikhil123'),
+('tejasai','teja123'),
+('aikhilraj','aikhil123'),
+('sejavamsi','seja1123')
+
+select * from Userdet
+select * from Admindet
