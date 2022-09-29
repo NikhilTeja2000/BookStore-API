@@ -22,3 +22,16 @@ insert into category(CategoryName,[Description],[Image],[Status],Position,Create
 delete from Books where BookId =2
 
 update Books set CategoryId=3,Title='books.Title',ISBN= 'books.ISBN',Year='books.Year', Price=52, Description = 'books.Description', Image = 'books.Image', Status = 'books.Statu', Position = 'books.Positi' where BookId = 8;
+
+
+create table UserOrder(Cusername char(50),
+City char(30),Pincode int ,Houseno char(20),Boktitle char(40),Quantity int,Price int)
+select * from UserOrder
+drop table UserOrder
+
+create table UserCart(CartId int,
+Cusername char(50),BookId int,Quantity int )
+select * from UserCart
+drop table UserCart
+
+insert into UserCart values(2,'tejasai',2,3)
